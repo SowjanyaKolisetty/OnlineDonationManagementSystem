@@ -1,0 +1,686 @@
+
+ /* Google Font and Icon */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Navbar Section */
+.navbar {
+    background-color: #2d3a8c;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffeb3b;
+    background-color: #1d2966;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+    padding-top: 100px;
+    animation: fadeSlideIn 2s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeSlideIn 2s ease-in-out 0.3s forwards;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeSlideIn 2s ease-in-out 0.6s forwards;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 12px 30px; /* Slightly increased padding for a larger button */
+    background-color: #F7F3FF; /* A soft lavender background */
+    color: #5A67D8; /* Medium blue for the text */
+    border: 2px solid #5A67D8; /* Border with a matching blue tone */
+    border-radius: 25px; /* More rounded edges */
+    font-size: 17px; /* Slightly larger font size */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    animation: fadeSlideIn 2s ease-in-out 0.9s forwards;
+}
+
+.cta-buttons .btn {
+    background-color: #2d3a8c;
+}
+
+.cta-buttons .donate-btn {
+    display: inline-block;
+    padding: 12px 30px; /* Slightly increased padding for a larger button */
+    background-color: #F7F3FF; /* A soft lavender background */
+    color: #5A67D8; /* Medium blue for the text */
+    border: 2px solid #5A67D8; /* Border with a matching blue tone */
+    border-radius: 25px; /* More rounded edges */
+    font-size: 17px; /* Slightly larger font size */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;;
+}
+
+.cta-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* Ongoing Drives Section */
+#ongoing-drives, .ongoing-drives {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#ongoing-drives h2, .ongoing-drives h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.drives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.drive {
+    background-color: #d1d8f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.drive:hover {
+    transform: scale(1.05);
+}
+
+.drive img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.drive h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.drive p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Register to Donate Section */
+.register-to-donate {
+    padding: 50px 0;
+    background-color: #e6edff;
+    color: #000;
+    text-align: center;
+}
+
+.register-to-donate h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.register-to-donate p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.register-to-donate .register-btn {
+    display: inline-block;
+    padding: 12px 30px; /* Slightly increased padding for a larger button */
+    background-color: #F7F3FF; /* A soft lavender background */
+    color: #5A67D8; /* Medium blue for the text */
+    border: 2px solid #5A67D8; /* Border with a matching blue tone */
+    border-radius: 25px; /* More rounded edges */
+    font-size: 17px; /* Slightly larger font size */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.register-to-donate .register-btn:hover {
+    background-color: #459ff9;
+}
+
+/* Impact Section */
+#impact {
+    background-color: #e6edff; /* Modify the background color */
+    color: #333; /* Adjust text color for contrast */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#impact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+     /* Optional: modify the heading color if needed */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #5a5a82;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    color:#ffffff;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #f9f9f9;
+}
+
+/* About Page Section Styles */
+.about-page .about-us {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-page .about-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-page .about-us p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-page .mission {
+    background-color: #3498db;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-page .mission h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-page .mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-page .mission-content img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.about-page .mission-content p {
+    font-size: 1.2rem;
+    width: 55%;
+}
+
+.about-page .team {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-page .team h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-page .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.about-page .team-member {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.about-page .team-member:hover {
+    transform: scale(1.05);
+}
+
+.about-page .team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.about-page .team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.about-page .team-member p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.about-page .why-donate {
+    background-color: #a6a6c2;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-page .why-donate h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-page .donate-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-page .donate-content img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.about-page .donate-content p {
+    font-size: 1.2rem;
+    width: 55%;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-page .mission-content, .about-page .donate-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-page .mission-content img, .about-page .donate-content img {
+        width: 80%;
+    }
+
+    .about-page .mission-content p, .about-page .donate-content p {
+        width: 100%;
+    }
+}
+
+
+
+/*impact Page*/
+
+/* Scoped Styles for Impact Page */
+.impact-page {
+    /* General Styles */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.impact-page .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.impact-page h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2d3a8c;
+}
+
+/* Real-Time Statistics Section */
+.impact-page .stats-section {
+    background-color: #3498db;
+    color: white;
+    padding: 50px 0;
+}
+
+.impact-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.impact-page .stat-item {
+    background-color: #2980b9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.impact-page .stat-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.impact-page .stat-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Stories of Impact Section */
+.impact-page .impact-stories {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.impact-page .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.impact-page .testimonial {
+    background-color: #e6edff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.impact-page .testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.impact-page .testimonial p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.impact-page .testimonial h4 {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+/* Call to Action Section */
+
+.get-involved-btn {
+    display: inline-block;
+    padding: 12px 30px; /* Slightly increased padding for a larger button */
+    background-color: #F7F3FF; /* A soft lavender background */
+    color: #5A67D8; /* Medium blue for the text */
+    border: 2px solid #5A67D8; /* Border with a matching blue tone */
+    border-radius: 25px; /* More rounded edges */
+    font-size: 17px; /* Slightly larger font size */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.get-involved-btn:hover {
+    background-color: #5A67D8; /* Darker lavender-blue on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.impact-page .cta-section {
+    background-color: #e74c3c;
+    color: white;
+    padding: 50px 0;
+}
+
+.impact-page .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.impact-page .cta-btn {
+    background-color: #fff;
+    color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.impact-page .cta-btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Footer */
+.impact-page .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.footer {
+    background-color: #2d3a8c;
+    color: #f3f4f6;
+    padding: 40px 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f9fafb;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+.footer a {
+    color: #9ca3af;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer .social-media-link {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .social-media-link:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .footer a {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
